@@ -1,0 +1,28 @@
+/*using color*/
+/*using Font*/
+/*mixin*/
+/*reset*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #343434; }
+
+html, body {
+  height: 100%;
+  font-size: 20px;
+  color: #343434;
+  animation: opaPage 0.5s linear; }
+
+@keyframes opaPage {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+/*# sourceMappingURL=setting.css.map */

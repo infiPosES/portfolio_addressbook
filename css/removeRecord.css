@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*using color*/
+/*using Font*/
+/*mixin*/
+/*reset*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #343434; }
+
+html, body {
+  font-size: 20px;
+  color: #343434;
+  animation: opaPage 0.5s linear; }
+
+@keyframes opaPage {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+@media all and (min-width: 1200px) {
+  /*알림창*/
+  .alertBox {
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 250px);
+    padding: 30px;
+    width: 500px;
+    height: 200px;
+    font-size: 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: white;
+    border: 1px solid #0575e6;
+    box-sizing: border-box;
+    /*버튼박스*/ }
+    .alertBox .buttonBox {
+      display: block;
+      width: 50%;
+      margin-top: 80px;
+      margin-left: calc(50% - 15px);
+      text-align: center;
+      /*버튼*/ }
+      .alertBox .buttonBox .alertBtn {
+        display: inline-block;
+        width: 45%;
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        border: none;
+        font-size: 0.8rem;
+        font-family: "Noto Sans KR", sans-serif;
+        border: 1px solid #0575e6;
+        box-sizing: border-box; }
+        .alertBox .buttonBox .alertBtn:hover {
+          background-color: #0575e6;
+          cursor: pointer;
+          color: white; }
+        .alertBox .buttonBox .alertBtn:focus {
+          outline: 2px solid #00f260; }
+      .alertBox .buttonBox .cancelBtn {
+        margin-right: 5%; } }
+
+/*# sourceMappingURL=removeRecord.css.map */

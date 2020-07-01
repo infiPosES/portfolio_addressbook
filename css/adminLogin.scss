@@ -1,0 +1,131 @@
+/* login */
+@import "setting";
+/*PC*/
+/*로그인 창*/
+.loginBox {
+	position: absolute;
+		top: calc(50% - 225px);
+       		left: calc(50% - 200px);
+	width: 400px;
+	height: 450px;
+	@include setBorder($blue);
+	/*header*/
+	& .loginHeader {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 150px;
+		/*닫기 버튼*/
+		& .closeBtn {
+			position: absolute;
+			top: 0px;
+			left: 87.5%;
+			width: 12.5%;
+			height: 50%;
+			line-height: 50px;
+			font-size: 1.5rem;
+			text-align: center;
+			@include pointAnimation;
+			&:hover {
+				color: $blue;
+			}
+		}
+		/*닫기 버튼 end*/
+		/*로그인창 타이틀*/
+		& .loginTitle {
+			position: absolute;
+			top: 80px;
+			left: 25%;
+			width: 50%;
+			text-align: center;
+			font: {
+				size: 1.5rem;
+				weight: bold;
+				family: $korean;
+			}
+			color: $blue;
+		}
+		/*로그인창 타이틀 end*/
+	}
+	/*header end*/
+	/*아이디 비밀번호 입력*/
+	& .inputBox {
+		margin-left: 5%;
+		width: 90%;
+		& .adminLogin {
+			margin-top: 20px;
+			width: 100%;
+			height: 50px;
+			font: {
+				size: 1rem;
+				family: $korean;
+			}
+			text-indent: 0.8rem;
+			@include setBorder(lightgray);
+			&:focus {
+				outline: 2px solid $green;
+			}
+		}
+		/*로그인 버튼*/
+		& .adminSubmit {
+			margin-top: 50px;
+			width: 100%;
+			height: 50px;
+			font: {
+				size: 1.5rem;
+				family: $english;
+			}
+			background-color: $blue;
+			color: white;
+			border: none;
+			outline: none;
+			@include pointAnimation;
+			&:hover {
+				background-color: $green;
+			}
+			&:focus {
+				background-color: $green;
+			}
+		}
+		/*로그인 버튼 end*/
+	}
+	/*아이디 비밀번호 입력 end*/
+}
+/*로그인 창 end*/
+/*관리자 로그인 ID, PW end*/
+.alertLogin {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 200px;
+		font: {
+		size: 0.8rem;
+		family: $korean;
+	}
+	@include setBorder($blue);
+	/*닫기, 최소화버튼*/
+	& .alertLine {
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		background-color: $blue;
+		& .closeAlert {
+			float: left;
+			margin-left: 85%;
+			width: 15%;
+			height: 30px;
+			color: white;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+	& .alertDisc {
+		width: 100%;
+		height: 170px;
+		padding: 10px;
+		word-spacing: 1px;
+	}
+}
+/*관리자 로그인 ID, PW end*/

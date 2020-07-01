@@ -1,0 +1,234 @@
+/*
+전화번호부 PHP
+addAddress.scss, lookUp.scss
+작성자: 김은숙
+작성일: 20-03-18
+수정일: 20-03-28(스타일 수정)
+*/
+@import "alertBox";
+/*PC*/
+/*연락처 추가, 조회 박스*/
+.addAddressBox {
+	margin: 50px calc(50% - 600px);	
+	width: 1200px;
+	@include setBorder(lightgray);
+	/*박스 타이틀 박스*/
+	& .header {
+		width: 100%;
+		height: 60px;
+		background-color: $blue;
+		@include setBorder($blue);
+		/*박스 제목*/
+		& .headerTitle {
+			float: left;
+			width: 95%;
+			height: 100%;
+			line-height: 60px;
+			color: white;
+			font: {
+				family: $korean;
+				weight: bold;
+				size: 1.5rem;
+			}
+			text-indent: 1rem;
+		}
+		/*박스 제목 end*/
+		/*close버튼*/
+		& .closeBox {
+			display: inline-block;
+			float: right;
+			width: 5%;
+			height: 100%;
+			line-height: 60px;
+			font-size: 2rem;
+			color: white;
+			text-align: center;
+			@include pointAnimation;
+			&:hover {color: $green;}
+			&::after {content:""; clear: both;}
+		}
+		/*close버튼 end*/
+	}
+	/*박스 타이틀 박스 end*/
+	/*정보 입력창*/
+	& .addressBox {
+		margin-top: 30px;
+		width: 100%;
+		/*이미지*/
+		& .userImgBox {
+			float: left;
+			width: 35%;
+			text-align: center;
+			& .userImg {
+				margin: {
+					left: 7.145%;
+					right: 7.145%;
+				}
+				width: 85.71%;
+				height: 360px;
+				object-fit: contain;
+				@include setBorder(lightgray);
+			}
+			/*addAddress.php 파일 업로드 버튼*/
+			& .imgLabel {
+				display: block;
+				margin: {
+					top: 30px;
+					left: 32.145%;
+				}
+				width: 35.71%;
+				height: 45px;
+				line-height:45px;
+				font: {
+					size: 1rem;
+					family: $korean;
+				}
+				border-radius: 0.5rem;
+				cursor: pointer;
+				@include setBorder(lightgray);
+				transition: all 0.2s linear;
+				&:hover {
+					color: white;
+					background-color: #aaa;
+				}
+			}
+			/*addAddress.php 파일 업로드 버튼(숨김)*/
+			& .imgUploadBtn {
+				visibility: hidden;
+			} 
+			/*lookUp.php 파일 다운로드*/
+			& .downloadImg {
+				@extend .imgLabel;
+				background-color: white;
+			}
+		}
+		/*input칸*/
+		& .infoInput {
+			margin-left: 35%;
+			width: 65%;
+			/*라벨*/
+			& .userLabel {
+				display: inline-block;
+				margin-top: 10px;
+				width: 100%;
+				height: 30px;
+				font: {
+					weight: bold;
+					family: $korean;
+				}
+				color: $blue;
+				& .requiredIcon {
+					color: $green;
+				} 
+			}	
+			/*인풋*/
+			& .inputUser {
+				display: inline-block;
+				margin-top: 5px;
+				width: 96.15%;
+				height: 50px;
+				text-indent: 10px;
+				font: {
+					size: 1rem;
+					family: $korean;
+				}
+				@include setBorder(lightgray);
+				outline: none;
+				&:focus {
+					background-color: #efefef;
+				}
+			}
+			&::after{
+				content:""; clear: both;
+			}
+			& .userName:focus, & .phoneNum:focus {
+				background-color: lightpink;
+			}
+			/*안내문*/
+			& .writeTip {
+				width: 100%;
+				height: 30px;
+				font: {
+					size: 0.7rem;
+					family: $korean;
+				}
+				color: gray;
+			}
+			/*메모*/
+			& .userMemo {
+				@extend .inputUser;
+				padding: 5px;
+				box-sizing: border-box;
+				height: 100px;
+				resize: none;
+			}
+		}
+		/*input칸 end*/
+		/*버튼 박스*/
+		& .btnBox {
+			margin: 50px 56.15%;
+			width: 40%;
+			height: 50px;
+			line-height: 50px;
+			/*addAddress.php btn */
+			& .btn {
+				float: left;
+				display: inline-block;
+				width: 45%;
+				height:50px;
+				font: {
+					size: 1rem;
+					family: $korean;
+				}
+				color: $blue;
+				background-color: white;
+				@include setBorder($blue);
+				@include pointAnimation;
+				cursor: pointer;
+				&:hover {
+					background-color: $blue;
+					color: white;
+				}
+			}
+			/*addAddress.php */
+			& .saveBtn {
+				margin-left: 10%;
+			}
+		}
+		/*버튼 박스 end*/
+		/*lookUp.php 버튼*/
+		& .returnBtn {	
+			margin: 50px 41%;
+			width: 18%;
+			height: 50px;
+			line-height: 50px;	
+			font: {
+				size: 1rem;
+				family: $korean;
+			}
+			text-align: center;
+			background-color: white;
+			color: $blue;
+			@include setBorder($blue);
+			cursor: pointer;
+			&:hover {
+				background-color: $blue;
+				color: white;
+			}
+
+		}
+		/*lookUp.php 버튼 end*/
+	}	
+	/*정보 입력창 end*/
+}	
+/*연락처 추가, 조회 박스 end*/
+/*정규식 오류시 안내메시지*/
+.nofiText {
+	font: {
+		size: 0.8rem;
+		family: $korean;
+		weight: bold;
+	}
+	color: red;
+}
+/*PC end*/

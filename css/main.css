@@ -1,0 +1,323 @@
+@charset "UTF-8";
+/* alertBox 메인선택삭제 */
+/*using color*/
+/*using Font*/
+/*mixin*/
+/*reset*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #343434; }
+
+html, body {
+  height: 100%;
+  font-size: 20px;
+  color: #343434;
+  animation: opaPage 0.5s linear; }
+
+@keyframes opaPage {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+@media all and (min-width: 1200px) {
+  /*알림창*/
+  .alertBox {
+    visibility: hidden;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 250px);
+    padding: 30px;
+    width: 500px;
+    height: 200px;
+    font-size: 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: white;
+    border: 1px solid #0575e6;
+    box-sizing: border-box;
+    /*버튼 1개:확인버튼*/
+    /*버튼 1개:확인버튼 end*/
+    /*버튼 2개:선택삭제 버튼*/
+    /*버튼 2개:선택삭제 버튼 end*/ }
+    .alertBox .alertCheckBtn {
+      margin-top: 80px;
+      width: 22.5%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: white;
+      border: none;
+      font-size: 0.8rem;
+      font-family: "Noto Sans KR", sans-serif;
+      border: 1px solid #0575e6;
+      box-sizing: border-box; }
+      .alertBox .alertCheckBtn:hover {
+        background-color: #0575e6;
+        cursor: pointer;
+        color: white; }
+      .alertBox .alertCheckBtn:focus {
+        outline: 2px solid #00f260; }
+    .alertBox .buttonBox {
+      display: block;
+      width: 50%;
+      margin-top: 80px;
+      margin-left: calc(50% - 15px);
+      text-align: center;
+      /*버튼*/
+      /* 버튼 end*/ }
+      .alertBox .buttonBox .alertBtn {
+        display: inline-block;
+        width: 45%;
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        border: none;
+        font-size: 0.8rem;
+        font-family: "Noto Sans KR", sans-serif;
+        border: 1px solid #0575e6;
+        box-sizing: border-box; }
+        .alertBox .buttonBox .alertBtn:hover {
+          background-color: #0575e6;
+          cursor: pointer;
+          color: white; }
+        .alertBox .buttonBox .alertBtn:focus {
+          outline: 2px solid #00f260; }
+      .alertBox .buttonBox .cancelBtn {
+        margin-right: 5%; }
+
+  /*알림창 end*/ }
+.portfolioAlert {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 48px;
+  font-size: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  text-align: center;
+  word-spacing: 1px;
+  background-color: #0575e6; }
+  .portfolioAlert i {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 90%; }
+    .portfolioAlert i:hover {
+      color: #00f260;
+      cursor: pointer; }
+
+/*headerWrap*/
+.headerWrap {
+  width: 100%;
+  height: 80px;
+  line-height: 78px;
+  overflow: hidden;
+  /*logo*/
+  /*관리자 login*/ }
+  .headerWrap .logo {
+    display: block;
+    float: left;
+    margin-left: 2%;
+    padding-top: 8px;
+    width: 18%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer; }
+  .headerWrap .adminLogin {
+    float: right;
+    display: block;
+    margin-right: 2%;
+    height: 100%;
+    font-size: 1rem;
+    font-family: "Noto Sans KR", sans-serif; }
+    .headerWrap .adminLogin::after {
+      content: "";
+      clear: both; }
+  .headerWrap .logout:hover, .headerWrap .anchorLogin:hover {
+    cursor: pointer;
+    color: #0575e6; }
+
+/*search contact*/
+.wrap {
+  margin-top: 200px;
+  margin-left: calc(50% - 500px);
+  margin-bottom: 200px;
+  width: 1000px;
+  /*검색창*/ }
+  .wrap .searchBox {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    outline: 3px solid #0575e6;
+    /*연락처 검색*/ }
+    .wrap .searchBox .searchContact {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      text-indent: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: "Noto Sans KR", sans-serif; }
+    .wrap .searchBox .searchIcon {
+      position: absolute;
+      top: 0px;
+      left: 90%;
+      width: 10%;
+      height: 100%;
+      line-height: 60px;
+      font-size: 1.5rem; }
+
+/*menuBox*/
+.adminMenu {
+  margin-top: 50px;
+  margin-left: 75%;
+  width: 25%;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  /*관리자 메뉴 연락처 추가, 선택삭제*/
+  /*선택삭제버튼*/ }
+  .adminMenu .adminMenuBtn {
+    float: left;
+    width: 45%;
+    height: 45px;
+    line-height: 42px;
+    color: #0575e6;
+    border: 1px solid #0575e6;
+    box-sizing: border-box;
+    cursor: pointer; }
+    .adminMenu .adminMenuBtn::after {
+      content: "";
+      clear: both; }
+    .adminMenu .adminMenuBtn:hover {
+      color: #00f260;
+      border: 1px solid #00f260;
+      box-sizing: border-box; }
+  .adminMenu .checkRemove {
+    margin-left: 10%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: white; }
+
+/*contact list, 연락처 리스트*/
+.contactList {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  /*항목별 타이틀*/
+  /*항목별 타이틀 end*/
+  /*각 항목별 칸*/
+  /*각 항목별 칸 end*/
+  /*검색 결과 없을 때*/ }
+  .contactList .tableTitle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #0575e6;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+    /*이름 칸*/
+    /*연락처 칸*/
+    /*이메일 칸*/
+    /*그룹 칸*/
+    /*직장 칸*/
+    /*전체선택, 해제*/ }
+    .contactList .tableTitle .userInfo {
+      float: left;
+      height: 100%;
+      text-align: center; }
+    .contactList .tableTitle .userNameT {
+      width: 12%; }
+    .contactList .tableTitle .userContactT {
+      width: 15%; }
+    .contactList .tableTitle .userEmailT {
+      width: 23%; }
+    .contactList .tableTitle .userGroupT {
+      width: 17.5%; }
+    .contactList .tableTitle .userJobT {
+      width: 17.5%; }
+    .contactList .tableTitle .checkAllT {
+      margin-left: 10%;
+      width: 5%; }
+  .contactList .tableList {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.7rem;
+    font-family: "Noto Sans KR", sans-serif;
+    border-bottom: 1px solid lightgray;
+    box-sizing: biorder-box;
+    /*이름 칸*/
+    /*연락처 칸*/
+    /*이메일 칸*/
+    /*그룹 칸*/
+    /*직장 칸*/
+    /*일반 더보기*/
+    /*관리자 아이콘 박스*/
+    /*관리자 checkBox 개별선택*/ }
+    .contactList .tableList:last-child {
+      border-bottom: none; }
+    .contactList .tableList .userInfo {
+      float: left;
+      height: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .contactList .tableList .userName {
+      width: 12%; }
+    .contactList .tableList .userContact {
+      width: 15%; }
+    .contactList .tableList .userEmail {
+      width: 23%; }
+    .contactList .tableList .userGroup {
+      width: 17.5%; }
+    .contactList .tableList .userJob {
+      width: 17.5%; }
+    .contactList .tableList .moreInfo {
+      margin-left: 5%;
+      width: 10%; }
+      .contactList .tableList .moreInfo::after {
+        content: "";
+        clear: both; }
+    .contactList .tableList .info {
+      display: inline-block;
+      width: 5%;
+      font-size: 1rem; }
+      .contactList .tableList .info:hover {
+        color: #0575e6; }
+    .contactList .tableList .checkBoxLine {
+      width: 5%; }
+  .contactList .searchResultNone {
+    width: 100%;
+    text-align: center;
+    color: gray;
+    display: none; }
+
+/*# sourceMappingURL=main.css.map */

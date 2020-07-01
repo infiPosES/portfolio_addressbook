@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/*
+전화번호부 PHP
+addAddress.scss, lookUp.scss
+작성자: 김은숙
+작성일: 20-03-18
+수정일: 20-03-28(스타일 수정)
+*/
+/* alertBox 메인선택삭제 */
+/*using color*/
+/*using Font*/
+/*mixin*/
+/*reset*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #343434; }
+
+html, body {
+  height: 100%;
+  font-size: 20px;
+  color: #343434;
+  animation: opaPage 0.5s linear; }
+
+@keyframes opaPage {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+@media all and (min-width: 1200px) {
+  /*알림창*/
+  .alertBox {
+    visibility: hidden;
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 250px);
+    padding: 30px;
+    width: 500px;
+    height: 200px;
+    font-size: 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #0575e6;
+    box-sizing: border-box;
+    /*버튼 1개:확인버튼*/
+    /*버튼 1개:확인버튼 end*/
+    /*버튼 2개:선택삭제 버튼*/
+    /*버튼 2개:선택삭제 버튼 end*/ }
+    .alertBox .alertCheckBtn {
+      margin-top: 80px;
+      width: 22.5%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: white;
+      border: none;
+      font-size: 0.8rem;
+      font-family: "Noto Sans KR", sans-serif;
+      border: 1px solid #0575e6;
+      box-sizing: border-box; }
+      .alertBox .alertCheckBtn:hover {
+        background-color: #0575e6;
+        cursor: pointer;
+        color: white; }
+      .alertBox .alertCheckBtn:focus {
+        outline: 2px solid #00f260; }
+    .alertBox .buttonBox {
+      display: block;
+      width: 50%;
+      margin-top: 80px;
+      margin-left: calc(50% - 15px);
+      text-align: center;
+      /*버튼*/
+      /* 버튼 end*/ }
+      .alertBox .buttonBox .alertBtn {
+        display: inline-block;
+        width: 45%;
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        border: none;
+        font-size: 0.8rem;
+        font-family: "Noto Sans KR", sans-serif;
+        border: 1px solid #0575e6;
+        box-sizing: border-box; }
+        .alertBox .buttonBox .alertBtn:hover {
+          background-color: #0575e6;
+          cursor: pointer;
+          color: white; }
+        .alertBox .buttonBox .alertBtn:focus {
+          outline: 2px solid #00f260; }
+      .alertBox .buttonBox .cancelBtn {
+        margin-right: 5%; }
+
+  /*알림창 end*/ }
+/*PC*/
+/*연락처 추가, 조회 박스*/
+.addAddressBox {
+  margin: 50px calc(50% - 600px);
+  width: 1200px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  /*박스 타이틀 박스*/
+  /*박스 타이틀 박스 end*/
+  /*정보 입력창*/
+  /*정보 입력창 end*/ }
+  .addAddressBox .header {
+    width: 100%;
+    height: 60px;
+    background-color: #0575e6;
+    border: 1px solid #0575e6;
+    box-sizing: border-box;
+    /*박스 제목*/
+    /*박스 제목 end*/
+    /*close버튼*/
+    /*close버튼 end*/ }
+    .addAddressBox .header .headerTitle {
+      float: left;
+      width: 95%;
+      height: 100%;
+      line-height: 60px;
+      color: white;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-indent: 1rem; }
+    .addAddressBox .header .closeBox {
+      display: inline-block;
+      float: right;
+      width: 5%;
+      height: 100%;
+      line-height: 60px;
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      transition: all linear 0.1s;
+      cursor: pointer; }
+      .addAddressBox .header .closeBox:hover {
+        color: #00f260; }
+      .addAddressBox .header .closeBox::after {
+        content: "";
+        clear: both; }
+  .addAddressBox .addressBox {
+    margin-top: 30px;
+    width: 100%;
+    /*이미지*/
+    /*input칸*/
+    /*input칸 end*/
+    /*버튼 박스*/
+    /*버튼 박스 end*/
+    /*lookUp.php 버튼*/
+    /*lookUp.php 버튼 end*/ }
+    .addAddressBox .addressBox .userImgBox {
+      float: left;
+      width: 35%;
+      text-align: center;
+      /*addAddress.php 파일 업로드 버튼*/
+      /*addAddress.php 파일 업로드 버튼(숨김)*/
+      /*lookUp.php 파일 다운로드*/ }
+      .addAddressBox .addressBox .userImgBox .userImg {
+        margin-left: 7.145%;
+        margin-right: 7.145%;
+        width: 85.71%;
+        height: 360px;
+        object-fit: contain;
+        border: 1px solid lightgray;
+        box-sizing: border-box; }
+      .addAddressBox .addressBox .userImgBox .imgLabel, .addAddressBox .addressBox .userImgBox .downloadImg {
+        display: block;
+        margin-top: 30px;
+        margin-left: 32.145%;
+        width: 35.71%;
+        height: 45px;
+        line-height: 45px;
+        font-size: 1rem;
+        font-family: "Noto Sans KR", sans-serif;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        border: 1px solid lightgray;
+        box-sizing: border-box;
+        transition: all 0.2s linear; }
+        .addAddressBox .addressBox .userImgBox .imgLabel:hover, .addAddressBox .addressBox .userImgBox .downloadImg:hover {
+          color: white;
+          background-color: #aaa; }
+      .addAddressBox .addressBox .userImgBox .imgUploadBtn {
+        visibility: hidden; }
+      .addAddressBox .addressBox .userImgBox .downloadImg {
+        background-color: white; }
+    .addAddressBox .addressBox .infoInput {
+      margin-left: 35%;
+      width: 65%;
+      /*라벨*/
+      /*인풋*/
+      /*안내문*/
+      /*메모*/ }
+      .addAddressBox .addressBox .infoInput .userLabel {
+        display: inline-block;
+        margin-top: 10px;
+        width: 100%;
+        height: 30px;
+        font-weight: bold;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #0575e6; }
+        .addAddressBox .addressBox .infoInput .userLabel .requiredIcon {
+          color: #00f260; }
+      .addAddressBox .addressBox .infoInput .inputUser, .addAddressBox .addressBox .infoInput .userMemo {
+        display: inline-block;
+        margin-top: 5px;
+        width: 96.15%;
+        height: 50px;
+        text-indent: 10px;
+        font-size: 1rem;
+        font-family: "Noto Sans KR", sans-serif;
+        border: 1px solid lightgray;
+        box-sizing: border-box;
+        outline: none; }
+        .addAddressBox .addressBox .infoInput .inputUser:focus, .addAddressBox .addressBox .infoInput .userMemo:focus {
+          background-color: #efefef; }
+      .addAddressBox .addressBox .infoInput::after {
+        content: "";
+        clear: both; }
+      .addAddressBox .addressBox .infoInput .userName:focus, .addAddressBox .addressBox .infoInput .phoneNum:focus {
+        background-color: lightpink; }
+      .addAddressBox .addressBox .infoInput .writeTip {
+        width: 100%;
+        height: 30px;
+        font-size: 0.7rem;
+        font-family: "Noto Sans KR", sans-serif;
+        color: gray; }
+      .addAddressBox .addressBox .infoInput .userMemo {
+        padding: 5px;
+        box-sizing: border-box;
+        height: 100px;
+        resize: none; }
+    .addAddressBox .addressBox .btnBox {
+      margin: 50px 56.15%;
+      width: 40%;
+      height: 50px;
+      line-height: 50px;
+      /*addAddress.php btn */
+      /*addAddress.php */ }
+      .addAddressBox .addressBox .btnBox .btn {
+        float: left;
+        display: inline-block;
+        width: 45%;
+        height: 50px;
+        font-size: 1rem;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #0575e6;
+        background-color: white;
+        border: 1px solid #0575e6;
+        box-sizing: border-box;
+        transition: all linear 0.1s;
+        cursor: pointer;
+        cursor: pointer; }
+        .addAddressBox .addressBox .btnBox .btn:hover {
+          background-color: #0575e6;
+          color: white; }
+      .addAddressBox .addressBox .btnBox .saveBtn {
+        margin-left: 10%; }
+    .addAddressBox .addressBox .returnBtn {
+      margin: 50px 41%;
+      width: 18%;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1rem;
+      font-family: "Noto Sans KR", sans-serif;
+      text-align: center;
+      background-color: white;
+      color: #0575e6;
+      border: 1px solid #0575e6;
+      box-sizing: border-box;
+      cursor: pointer; }
+      .addAddressBox .addressBox .returnBtn:hover {
+        background-color: #0575e6;
+        color: white; }
+
+/*연락처 추가, 조회 박스 end*/
+/*정규식 오류시 안내메시지*/
+.nofiText {
+  font-size: 0.8rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  color: red; }
+
+/*PC end*/
+
+/*# sourceMappingURL=addAddress.css.map */

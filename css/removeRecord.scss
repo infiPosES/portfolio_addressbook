@@ -1,0 +1,58 @@
+@import "setting";
+@media all and (min-width: 320px) {
+}
+@media all and (min-width: 1200px) {
+	/*알림창*/
+	.alertBox {
+		cursor: pointer;
+		position: absolute;
+		top: 5%;
+		left: calc(50% - 250px);
+		padding: 30px;
+		width: 500px;
+		height: 200px;	
+		font: {
+			size: 1rem;
+			family: $korean;
+		}
+		background-color: white;
+		@include setBorder($blue);
+			/*버튼박스*/
+		 	& .buttonBox {
+				display: block;
+				width: 50%;
+				margin: {
+					top: 80px;
+					left: calc(50% - 15px);
+				}
+				text-align: center;
+				/*버튼*/
+				& .alertBtn {
+					display: inline-block;
+					width: 45%;
+					height: 50px;
+					line-height: 50px;
+					background-color: white;
+					border: none;
+					font: {
+						size: 0.8rem;
+						family: $korean;
+					}
+					@include setBorder($blue);
+					&:hover {
+						background-color: $blue;
+						cursor: pointer;
+						color: white;
+					}
+					&:focus {
+						outline: 2px solid $green;
+					}
+				}
+				& .cancelBtn {
+					margin-right: 5%;
+				}
+			}
+	}
+}
+
+

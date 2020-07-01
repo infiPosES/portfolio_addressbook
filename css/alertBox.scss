@@ -1,0 +1,86 @@
+/* alertBox 메인선택삭제 */
+@import "setting";
+@media all and (min-width: 320px) {
+}
+@media all and (min-width: 1200px) {
+	/*알림창*/
+	.alertBox {
+		visibility: hidden;
+		position: absolute;
+		top: 5%;
+		left: calc(50% - 250px);
+		padding: 30px;
+		width: 500px;
+		height: 200px;	
+		font: {
+			size: 1rem;
+			family: $korean;
+		}
+		text-align: center;
+		background-color: white;
+		@include setBorder($blue);
+		/*버튼 1개:확인버튼*/
+		& .alertCheckBtn {
+			margin-top: 80px; 
+			width: 22.5%;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			line-height: 50px;
+			background-color: white;
+			border: none;
+			font: {
+				size: 0.8rem;
+				family: $korean;
+			}
+			@include setBorder($blue);
+			&:hover {
+				background-color: $blue;
+				cursor: pointer;
+				color: white;
+			}
+			&:focus {
+				outline: 2px solid $green;
+			}
+		}
+		/*버튼 1개:확인버튼 end*/
+		/*버튼 2개:선택삭제 버튼*/
+		& .buttonBox{
+			display: block;
+			width: 50%;
+			margin: {
+				top: 80px;
+				left: calc(50% - 15px);
+			}
+			text-align: center;
+			/*버튼*/
+			& .alertBtn {
+				display: inline-block;
+				width: 45%;
+				height: 50px;
+				line-height: 50px;
+				background-color: white;
+				border: none;
+				font: {
+					size: 0.8rem;
+					family: $korean;
+				}
+				@include setBorder($blue);
+				&:hover {
+					background-color: $blue;
+					cursor: pointer;
+					color: white;
+				}
+				&:focus {
+					outline: 2px solid $green;
+				}
+			}
+			/* 버튼 end*/
+			& .cancelBtn {
+				margin-right: 5%;
+			}
+		}
+		/*버튼 2개:선택삭제 버튼 end*/
+	}
+	/*알림창 end*/
+}
